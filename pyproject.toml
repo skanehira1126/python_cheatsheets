@@ -1,0 +1,31 @@
+[project]
+name = "mymodule"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Shinichi Kanehira", email = "shinichi.kanehira@gmail.com" }
+]
+dependencies = [
+    "jupyterlab>=4.2.1",
+    "numpy>=1.26.4",
+    "pandas>=2.2.2",
+    "matplotlib>=3.9.0",
+    "seaborn>=0.13.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mymodule"]
